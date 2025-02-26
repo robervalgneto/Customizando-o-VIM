@@ -37,7 +37,6 @@ set ignorecase      " Ignora maiúsculas por padrão
 set smartcase       " Respeita maiúsculas se houver na busca
 set incsearch       " Realiza busca incremental
 set hlsearch        " Realça resultados da busca
-nnoremap <Space> :nohlsearch<CR> " Barra de espaço limpa realce de busca
 
 " Melhorias de navegação
 set scrolloff=10    " Mantém 10 linhas visíveis acima/abaixo ao rolar
