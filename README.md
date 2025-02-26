@@ -68,13 +68,8 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx " I
 4. Salve o arquivo e saia (`CTRL + X`, `Y`, `Enter`).
 5. Abra o Vim e aproveite sua nova configuração!
 
-## Contribuição
-
-Sugestões de melhorias são bem-vindas! Sinta-se à vontade para modificar as configurações conforme suas preferências.
-
----
-
-Feito para tornar sua experiência no Vim mais produtiva e eficiente! 🚀
+## Contribuidor
+José Roberval Vieira Gomes Neto
 
 
 
