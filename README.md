@@ -1,4 +1,4 @@
-# Configuração do Vim - Arquivo .vimrc
+# Customização do Vim - Arquivo .vimrc
 
 Este arquivo `.vimrc` fornece uma configuração otimizada para o Vim, melhorando a usabilidade, navegação e experiência visual.
 
