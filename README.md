@@ -1,94 +1,80 @@
-# códigos para o arquivo .vimrc pra você configurar seu Vim!!
+# Configuração do Vim - Arquivo .vimrc
+
+Este arquivo `.vimrc` fornece uma configuração otimizada para o Vim, melhorando a usabilidade, navegação e experiência visual.
+
+## Recursos Principais
+
+- **Melhor visualização**: Numeração de linhas, realce de sintaxe e suporte a cores.
+- **Melhoria na edição**: Indentação automática, substituição de tabs por espaços.
+- **Navegação eficiente**: Rolagem otimizada e atalhos para facilitar buscas.
+- **Desempenho aprimorado**: Renderização mais rápida e melhor suporte a terminais modernos.
+
+## Configuração
+
+Adicione as seguintes linhas ao seu arquivo `~/.vimrc`:
+
+```vim
+" Configuração básica\
+set nocompatible    " Garante que o Vim não rode no modo de compatibilidade com Vi
+set encoding=utf-8   " Usa codificação UTF-8
+set number          " Exibe a numeração das linhas
+set relativenumber  " Exibe numeração relativa para facilitar movimentação
+
+" Melhorias visuais
+set cursorline      " Destaca a linha do cursor
+set cursorcolumn    " Destaca a coluna do cursor
+set termguicolors   " Habilita suporte a cores verdadeiras
+set background=dark " Define fundo escuro para melhor legibilidade
+
+" Melhorias na edição
+set shiftwidth=4    " Define indentamento de 4 espaços
+set tabstop=4       " Define tabulação de 4 espaços
+set expandtab       " Converte tabulações em espaços
+set autoindent      " Mantém a indentação da linha anterior
+
+" Pesquisa inteligente
+set ignorecase      " Ignora maiúsculas por padrão
+set smartcase       " Respeita maiúsculas se houver na busca
+set incsearch       " Realiza busca incremental
+set hlsearch        " Realça resultados da busca
+nnoremap <Space> :nohlsearch<CR> " Barra de espaço limpa realce de busca
+
+" Melhorias de navegação
+set scrolloff=10    " Mantém 10 linhas visíveis acima/abaixo ao rolar
+set nowrap         " Impede quebra de linha automática
+set splitbelow splitright " Janelas divididas abertas de forma intuitiva
+
+" Melhorias de desempenho
+set lazyredraw      " Evita redesenho desnecessário da tela
+set ttyfast         " Diz ao Vim que o terminal é rápido
+set wildmenu        " Habilita menu de autocomplete
+set wildmode=list:longest " Melhora autocomplete estilo Bash
+set mouse=a        " Habilita uso do mouse
+
+" Evitar arquivos desnecessários
+set nobackup       " Não salva arquivos de backup
+set nowritebackup  " Não salva arquivos temporários
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx " Ignora arquivos indesejados
+```
+
+## Como Aplicar as Configurações
+
+1. Abra seu terminal.
+2. Edite ou crie o arquivo `.vimrc` no diretório home:
+   ```sh
+   nano ~/.vimrc
+   ```
+3. Copie e cole as configurações acima.
+4. Salve o arquivo e saia (`CTRL + X`, `Y`, `Enter`).
+5. Abra o Vim e aproveite sua nova configuração!
+
+## Contribuição
+
+Sugestões de melhorias são bem-vindas! Sinta-se à vontade para modificar as configurações conforme suas preferências.
+
+---
+
+Feito para tornar sua experiência no Vim mais produtiva e eficiente! 🚀
 
 
-"Compatibility to vim only
-set nocompatible 
-
-"Wrap text extends beyond the screen
-set wrap
-
-"Encoding
-set encoding=utf-8
-
-" Line Numbers
-set number
-
-" Status bar
-set laststatus=2
-
-" Enable type file detection. Vim will be able to try to detect the type of file in use.
-filetype on
-
-" Enable plugins and load plugin for the detected file type.
-filetype plugin on
-
-" Load an indent file for the detected file type.
-filetype indent on
-
-" Turn syntax highlighting on.
-syntax on
-
-" Highlight cursor line underneath the cursor horizontally.
-set cursorline
-
-" Highlight cursor line underneath the cursor vertically.
-set cursorcolumn
-
-" Set shift width to 4 spaces.
-set shiftwidth=4
-
-" Set tab width to 4 columns.
-set tabstop=4
-
-" Use space characters instead of tabs.
-set expandtab
-
-" Do not save backup files.
-set nobackup
-
-" Do not let cursor scroll below or above N number of lines when scrolling.
-set scrolloff=10
-
-" Do not wrap lines. Allow long lines to extend as far as the line goes.
-set nowrap
-
-" While searching though a file incrementally highlight matching characters as you type.
-set incsearch
-
-" Ignore capital letters during search.
-set ignorecase
-
-" Override the ignorecase option if searching for capital letters.
-" This will allow you to search specifically for capital letters.
-set smartcase
-
-" Show partial command you type in the last line of the screen.
-set showcmd
-
-" Show the mode you are on the last line.
-set showmode
-
-" Show matching words during a search.
-set showmatch
-
-" Use highlighting when doing a search.
-set hlsearch
-
-" Set the commands to save in history default number is 20.
-set history=1000
-
-" Enable auto completion menu after pressing TAB.
-set wildmenu
-
-" Make wildmenu behave like similar to Bash completion.
-set wildmode=list:longest
-
-" There are certain files that we would never want to edit with Vim.
-" Wildmenu will ignore files with these extensions.
-set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
-
-"Call the .vimrc.plug file
-if filereadable(expand("~/.vimrc.plug"))
-    source ~/.vimrc.plug
-endif
 
